@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <strong>Aplicação Web desenvolvida com HTML, CSS e JAVASCRIPT./strong>
+  <strong>Aplicação Web desenvolvida com HTML, CSS e JAVASCRIPT.</strong>
 </p>
 
 <p align="center">
