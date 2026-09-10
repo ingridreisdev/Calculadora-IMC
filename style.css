@@ -1,0 +1,170 @@
+:root {
+    --cor-principal: #FFF5F8;
+    --card-fundo: #FFFFFF;
+    --texto: #4A2E38;
+    --text-soft: #A67888;
+    --accent: #E091B0;
+    --borda: #F6D9E4;
+
+ font-family: -apple-system, BlinkSystemFont, "Segoe UI", Roboto, Sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--cor-principal);
+    color: var(--texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card-fundo);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 24px rgba(224, 145, 176, 0.15);
+}
+
+.card-header {
+    margin-bottom: 32px;
+}
+
+.eyebrown {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: var(--text-soft);
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 13px;
+    color: var(--text-soft);
+}
+
+input {
+    font-size: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--cor-principal);
+    color: var(--texto);
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+input:focus {
+    border-color: var(--accent);
+}
+
+button {
+    margin-top: 6px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color:#FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#resultado {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+#resultado.oculto {
+    display: none;
+}
+
+.resultado.numero {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--text-soft);
+}
+
+.categoria {
+    margin: 8px 0 24px;
+    font-size: 15px;
+    color: var(--text-soft);
+}
+
+.barra {
+    position: relative;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(
+        to right,
+        #FBD6E4 0%,
+        #FBD6E4 25%,
+        #F2A8C4 25%,
+        #F2A8C4 50%,
+        #E091B0 50%,
+        #E091B0 75%,
+        #C2588A 75%,
+        #C2588A 100%
+    );
+    margin-bottom: 8px;
+}
+
+.barra-marcador {
+    position: absolute;
+    top: -4px;
+    width: 3px;
+    height: 16px;
+    background: var(--texto);
+    left: 0%;
+    transition: left 0.4s ease;
+}
+
+.barra-legendas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-soft);
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 32px 24px;
+    }
+    .resultado-numero {
+        font-size: 46px;
+    }
+}
+
+
